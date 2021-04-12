@@ -35,28 +35,28 @@ def save_new_soldier_info():
 
 
 @app.route("/sum/<value1>/<value2>")    
-def double_num(value1, value2):
+def sum(value1, value2):
     with open("/home/output/test.txt", "a") as f:
         f.write("{} + {} =  {}".format(value1, value2, int(value1) + int(value2)))
     print(os.listdir("/home"))
     return str(int(value1) + int(value2))
 
 @app.route("/subtract/<value1>/<value2>")    
-def double_num(value1, value2):
+def subtract(value1, value2):
     with open("/home/output/test.txt", "a") as f:
         f.write("{} + {} =  {}".format(value1, value2, int(value1) - int(value2)))
     print(os.listdir("/home"))
     return str(int(value1) - int(value2))
 
 @app.route("/multiply/<value1>/<value2>")    
-def double_num(value):
+def multiply(value1, value2):
     with open("/home/output/test.txt", "a") as f:
         f.write("{} + {} =  {}".format(value1, value2, int(value1) * int(value2)))
     print(os.listdir("/home"))
     return str(int(value1)*int(value2))
 
 @app.route("/divide/<value1>/<value2>")    
-def double_num(value):
+def divide(value1, value2):
     with open("/home/output/test.txt", "a") as f:
         f.write("{} + {} =  {}".format(value1, value2, float(value1) / float(value2)))
     print(os.listdir("/home"))
