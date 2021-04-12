@@ -8,6 +8,7 @@ RUN apt-get install -y git
 RUN python3.8 -m pip install flask
 WORKDIR /home
 RUN mkdir output
+RUN mkdir test
 RUN git clone https://github.com/teniii/MDS-Docker.git
 
 CMD python3.8 /home/MDS-Docker/example_flask_2.py
